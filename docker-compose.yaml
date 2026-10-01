@@ -1,0 +1,14 @@
+services:
+  wavelet_gan:
+    build: .
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    volumes:
+      - .:/home/user/work
+      - ${DATA_DIR:-./data}:/data
+    command: tail -F /dev/null

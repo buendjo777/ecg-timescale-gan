@@ -1,0 +1,8 @@
+# Tested with numpy 1.26 and TensorFlow 2.16-2.20.
+numpy>=1.26,<2
+matplotlib
+pywavelets
+scikit-learn
+scipy
+tensorflow
+wfdb
